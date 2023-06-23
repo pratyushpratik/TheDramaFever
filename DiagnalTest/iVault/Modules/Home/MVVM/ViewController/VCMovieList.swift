@@ -33,7 +33,7 @@ class VCMovieList: UIViewController {
     private lazy var moviesDataSource = movieListConfigureDataSource()
     
     //mutable storage slot for storing data from server
-    private lazy var arrMovieList = [ResponseModelMovieList.Page.ContentItems.Content]()
+    private lazy var arrMovieList = [ResponseModelContent]()
     
     //Enumeration for section of CollectionView
     private enum MovieListViewSection {
@@ -41,7 +41,7 @@ class VCMovieList: UIViewController {
     }
     
     //Typealias for returntype of UICollectionViewDiffableDataSource
-    private typealias MovieListDataSourceReturnType = UICollectionViewDiffableDataSource<MovieListViewSection, ResponseModelMovieList.Page.ContentItems.Content>
+    private typealias MovieListDataSourceReturnType = UICollectionViewDiffableDataSource<MovieListViewSection, ResponseModelContent>
     
     //immutable storage slot for CollectionView CellReusableIdentifier
     private let cvcMovieListReusableIdentifier = CollectionViewCellReusableIdentifier.cvcMovieList.rawValue
@@ -105,7 +105,7 @@ extension VCMovieList {
     private func moviesUpdateSnapshot(animatingChange: Bool = false) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            var snapshot = NSDiffableDataSourceSnapshot<MovieListViewSection, ResponseModelMovieList.Page.ContentItems.Content>()
+            var snapshot = NSDiffableDataSourceSnapshot<MovieListViewSection, ResponseModelContent>()
             snapshot.appendSections([.all])
             snapshot.appendItems(self.arrMovieList, toSection: .all)
             self.moviesDataSource.apply(snapshot, animatingDifferences: false) {

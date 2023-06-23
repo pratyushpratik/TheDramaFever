@@ -22,16 +22,19 @@ class CVCMovieList: UICollectionViewCell {
     @IBOutlet private weak var constraintTrailingLblName: NSLayoutConstraint!
     
     //storage slots
-    var model: ResponseModelMovieList.Page.ContentItems.Content? {
+    var model: ResponseModelContent? {
         didSet {
-            lblName.text = model?.name
-            if lblName.isTruncatedOrNot() {
-                constraintTrailingLblName.isActive = false
-                lblName.startMarqueeLabelAnimation()
-            } else {
-                constraintTrailingLblName.isActive = true
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.lblName.text = self.model?.name
+                if self.lblName.isTruncatedOrNot() {
+                    self.constraintTrailingLblName.isActive = false
+                    self.lblName.startMarqueeLabelAnimation()
+                } else {
+                    self.constraintTrailingLblName.isActive = true
+                }
+                self.imgView.image = UIImage(named: self.model?.posterImage ?? "placeholder_for_missing_posters") ?? UIImage(named: "placeholder_for_missing_posters")
             }
-            imgView.image = UIImage(named: model?.posterImage ?? "placeholder_for_missing_posters") ?? UIImage(named: "placeholder_for_missing_posters")
         }
     }
 }

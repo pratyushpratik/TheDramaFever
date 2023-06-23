@@ -16,11 +16,11 @@ import Foundation
  */
 class VMMovieList {
     
-    lazy var arrMovieList = Bindable<[ResponseModelMovieList.Page.ContentItems.Content]>()
+    lazy var arrMovieList = Bindable<[ResponseModelContent]>()
     var testingError: CustomErrors?
 
     //for testing
-    func testMovieListModel(arrMovieList: [ResponseModelMovieList.Page.ContentItems.Content]) {
+    func testMovieListModel(arrMovieList: [ResponseModelContent]) {
         self.arrMovieList.value = arrMovieList
     }
     
@@ -38,7 +38,7 @@ class VMMovieList {
         }
     }
     
-    private func getMovieList(for page: Int, onCompletion: @escaping (Result<[ResponseModelMovieList.Page.ContentItems.Content], CustomErrors>) -> Void) {
+    private func getMovieList(for page: Int, onCompletion: @escaping (Result<[ResponseModelContent], CustomErrors>) -> Void) {
         let fileName = "CONTENTLISTINGPAGE-PAGE\(page)"
         if let model = loadJson(for: fileName, type: ResponseModelMovieList.self) {
             onCompletion(.success(model.page.contentItems.content))

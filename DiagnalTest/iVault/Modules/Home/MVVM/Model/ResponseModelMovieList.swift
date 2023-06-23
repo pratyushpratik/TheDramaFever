@@ -10,6 +10,8 @@
  */
 import Foundation
 
+typealias ResponseModelContent = ResponseModelMovieList.Page.ContentItems.Content
+
 /**
  MARK: ResponseModelMovieList
  - Defination of struct ResponseModelMovieList.
