@@ -191,7 +191,7 @@ extension VCMovieList: UICollectionViewDelegateFlowLayout, UICollectionViewDeleg
         return CGSize(width: width, height: height)    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 48
+        return 36
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

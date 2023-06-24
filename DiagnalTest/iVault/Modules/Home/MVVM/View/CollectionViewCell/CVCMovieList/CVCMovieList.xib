@@ -31,7 +31,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDa-4c-xTK">
-                                <rect key="frame" x="0.0" y="324" width="220" height="128"/>
+                                <rect key="frame" x="0.0" y="324" width="220" height="27.666666666666686"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web Light" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                             <constraint firstAttribute="trailing" secondItem="Ebj-VB-C0f" secondAttribute="trailing" id="Pah-w7-egY"/>
                             <constraint firstAttribute="trailing" secondItem="zDa-4c-xTK" secondAttribute="trailing" id="V3C-BS-Kud"/>
                             <constraint firstItem="zDa-4c-xTK" firstAttribute="leading" secondItem="HZj-hH-mAz" secondAttribute="leading" id="fQX-NL-Y4E"/>
-                            <constraint firstAttribute="bottom" secondItem="zDa-4c-xTK" secondAttribute="bottom" id="lVc-Ue-6as"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zDa-4c-xTK" secondAttribute="bottom" id="lVc-Ue-6as"/>
                             <constraint firstItem="Ebj-VB-C0f" firstAttribute="leading" secondItem="HZj-hH-mAz" secondAttribute="leading" id="z41-e9-zsP"/>
                         </constraints>
                     </view>
