@@ -5,11 +5,16 @@
 //  Created by Pratyush Pratik Sinha on 24/06/23.
 //
 
+/**
+ MARK: Importing modules
+ */
 import UIKit
 
+//extension of UIBarButtonItem
 extension UIBarButtonItem {
 
-    static func setupBarButton(_ target: Any?, action: Selector, imageName: String, size: CGSize = CGSize(width: 24, height: 24), tintColor: UIColor?) -> UIBarButtonItem {
+    //method for setting up bar button with constraints
+    func setupBarButton(_ target: Any?, action: Selector, imageName: String, size: CGSize = CGSize(width: 24, height: 24), tintColor: UIColor?) -> UIBarButtonItem {
         let button = UIButton(type: .system)
         button.tintColor = tintColor
         button.setImage(UIImage(named: imageName), for: .normal)

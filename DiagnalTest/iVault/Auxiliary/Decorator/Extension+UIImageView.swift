@@ -5,10 +5,15 @@
 //  Created by Pratyush Pratik Sinha on 24/06/23.
 //
 
+/**
+ MARK: Importing modules
+ */
 import UIKit
 
+//extension of UIImage
 extension UIImage {
     
+    //method for resizing image
     func resizeImage(targetSize: CGSize) -> UIImage {
         let size = self.size
         
