@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,12 +12,14 @@
         <scene sceneID="VDa-LA-tpJ">
             <objects>
                 <navigationController id="hoy-ZE-F8m" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ac9-IU-oHl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ac9-IU-oHl">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="GyU-DC-DIX" kind="relationship" relationship="rootViewController" id="zAv-2Q-gIX"/>
+                        <segue destination="7sW-OU-q0K" kind="relationship" relationship="rootViewController" id="ts4-2s-g9Z"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMi-0T-qez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -32,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RHX-l4-f89">
-                                <rect key="frame" x="16" y="103" width="361" height="749"/>
+                                <rect key="frame" x="16" y="59" width="361" height="793"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="47J-t4-mqp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -44,7 +47,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ov-o5-ol5"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7Ov-o5-ol5" firstAttribute="trailing" secondItem="RHX-l4-f89" secondAttribute="trailing" constant="16" id="Ckb-Cp-Pfn"/>
                             <constraint firstItem="RHX-l4-f89" firstAttribute="leading" secondItem="7Ov-o5-ol5" secondAttribute="leading" constant="16" id="kso-Ta-Ymz"/>
@@ -61,5 +64,47 @@
             </objects>
             <point key="canvasLocation" x="232.82442748091603" y="44.366197183098592"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="igS-qt-9It">
+            <objects>
+                <viewController storyboardIdentifier="VCHome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7sW-OU-q0K" customClass="VCHome" customModule="DiagnalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Np4-WG-Tef">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvO-01-74h">
+                                <rect key="frame" x="20" y="317.66666666666669" width="353" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Wcb-KE-S3q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Navigate to Movie List"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="7sW-OU-q0K" eventType="touchUpInside" id="dPQ-0s-82j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ihg-bR-Hnl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VvO-01-74h" firstAttribute="centerY" secondItem="ihg-bR-Hnl" secondAttribute="centerY" id="EWA-jA-neb"/>
+                            <constraint firstItem="VvO-01-74h" firstAttribute="centerX" secondItem="ihg-bR-Hnl" secondAttribute="centerX" id="GDL-Rw-K8Q"/>
+                            <constraint firstItem="ihg-bR-Hnl" firstAttribute="trailing" secondItem="VvO-01-74h" secondAttribute="trailing" constant="20" id="WeQ-HM-Q18"/>
+                            <constraint firstItem="VvO-01-74h" firstAttribute="leading" secondItem="ihg-bR-Hnl" secondAttribute="leading" constant="20" id="Zg5-x8-enp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jT4-Vy-P3r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hT-gY-yxi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453" y="30"/>
+        </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
