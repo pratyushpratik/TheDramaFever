@@ -22,6 +22,7 @@
 		81306F2E2A44BCC800BA818F /* CVCMovieList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81306F2C2A44BCC800BA818F /* CVCMovieList.xib */; };
 		8149424A2A47041900C01560 /* VCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814942492A47041900C01560 /* VCHome.swift */; };
 		8149424E2A47198B00C01560 /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8149424D2A47198B00C01560 /* Extension+UIImageView.swift */; };
+		814942502A47243D00C01560 /* VMMovieListTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8149424F2A47243D00C01560 /* VMMovieListTestCase.swift */; };
 		81A7936B2A4612F400B94F95 /* Extension+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7936A2A4612F400B94F95 /* Extension+UILabel.swift */; };
 		81AAFD282A45686A00A325A6 /* ResponseModelMovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAFD272A45686A00A325A6 /* ResponseModelMovieList.swift */; };
 		81AAFD2A2A456AB300A325A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAFD292A456AB300A325A6 /* Constants.swift */; };
@@ -71,6 +72,7 @@
 		81306F2C2A44BCC800BA818F /* CVCMovieList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVCMovieList.xib; sourceTree = "<group>"; };
 		814942492A47041900C01560 /* VCHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCHome.swift; sourceTree = "<group>"; };
 		8149424D2A47198B00C01560 /* Extension+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
+		8149424F2A47243D00C01560 /* VMMovieListTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMMovieListTestCase.swift; sourceTree = "<group>"; };
 		81A7936A2A4612F400B94F95 /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
 		81AAFD272A45686A00A325A6 /* ResponseModelMovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModelMovieList.swift; sourceTree = "<group>"; };
 		81AAFD292A456AB300A325A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				8118AB592A44738E00873A7C /* DiagnalTestTests.swift */,
+				8149424F2A47243D00C01560 /* VMMovieListTestCase.swift */,
 			);
 			path = DiagnalTestTests;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8118AB5A2A44738E00873A7C /* DiagnalTestTests.swift in Sources */,
+				814942502A47243D00C01560 /* VMMovieListTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
