@@ -30,16 +30,18 @@ class VMMovieList {
     
     //method to be called from controller
     //result enum is used for success and faliure
-    final func fireAPIGETMovieList(for page: Int) {
+    final func fireAPIGETMovieList(for page: Int, onCompletion: (() -> ())? = nil) {
         getMovieList(for: page) { (result) in
             switch result {
             case .success(let movieList):
                 print(movieList)
                 DispatchQueue.global(qos: .userInteractive).async { [weak self] in
                     self?.arrMovieList.value = movieList
+                    onCompletion?()
                 }
             case .failure(let error):
                 self.testingError = error
+                onCompletion?()
             }
         }
     }

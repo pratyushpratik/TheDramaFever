@@ -12,16 +12,18 @@ final class VMMovieListTestCase: XCTestCase {
     
     func testfireAPIGetMovieListSuccess() {
         let viewModel = VMMovieList()
-        viewModel.fireAPIGETMovieList(for: 1)
-        print("viewModel.arrMovieList.value", viewModel.arrMovieList.value ?? [])
-        XCTAssertTrue(viewModel.arrMovieList.value?.isEmpty == false)
+        viewModel.fireAPIGETMovieList(for: 1) {
+            print("viewModel.arrMovieList.value", viewModel.arrMovieList.value ?? [])
+            XCTAssertTrue(viewModel.arrMovieList.value?.isEmpty == false)
+        }
     }
     
     func testfireAPIGetMovieListFaliure() {
         let viewModel = VMMovieList()
-        viewModel.fireAPIGETMovieList(for: 4) //since page 4 json is not available
-        print("viewModel.testingError==>", viewModel.testingError?.description ?? "")
-        XCTAssertTrue(viewModel.testingError != nil)
+        viewModel.fireAPIGETMovieList(for: 4) { //since page 4 json is not available
+            print("viewModel.testingError==>", viewModel.testingError?.description ?? "")
+            XCTAssertTrue(viewModel.testingError != nil)
+        }
     }
     
     func testVMMovieListWithDataModel() {
