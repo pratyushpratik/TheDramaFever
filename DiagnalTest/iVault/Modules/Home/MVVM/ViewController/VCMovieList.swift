@@ -102,6 +102,7 @@ private extension VCMovieList {
     }
     
     func setupNavigationBar() {
+        //self.navigationController?.navigationBar.shadowImage = UIImage(named: "nav_bar")?.resizeImage(targetSize: CGSize.init(width: UIScreen.main.bounds.width, height: 40))
         rightButtonItem = UIBarButtonItem.setupBarButton(self, action: #selector(rightButtonAction), imageName: "search", tintColor: .white)
         navigationItem.rightBarButtonItem = rightButtonItem
         navigationItem.leftBarButtonItem = backBarButtonItem

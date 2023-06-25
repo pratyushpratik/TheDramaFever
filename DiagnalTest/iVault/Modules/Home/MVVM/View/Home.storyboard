@@ -7,12 +7,17 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TitilliumWeb-Light.ttf">
+            <string>TitilliumWeb-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="VDa-LA-tpJ">
             <objects>
                 <navigationController id="hoy-ZE-F8m" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ac9-IU-oHl">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" translucent="NO" id="ac9-IU-oHl">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,9 +55,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7Ov-o5-ol5" firstAttribute="trailing" secondItem="RHX-l4-f89" secondAttribute="trailing" constant="16" id="Ckb-Cp-Pfn"/>
+                            <constraint firstItem="RHX-l4-f89" firstAttribute="top" secondItem="7Ov-o5-ol5" secondAttribute="top" id="IUh-vH-DKY"/>
                             <constraint firstItem="RHX-l4-f89" firstAttribute="leading" secondItem="7Ov-o5-ol5" secondAttribute="leading" constant="16" id="kso-Ta-Ymz"/>
                             <constraint firstAttribute="bottom" secondItem="RHX-l4-f89" secondAttribute="bottom" id="oBV-BK-OTM"/>
-                            <constraint firstItem="RHX-l4-f89" firstAttribute="top" secondItem="7Ov-o5-ol5" secondAttribute="top" id="yB6-N9-l7V"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yy3-x6-IjI"/>
@@ -72,26 +77,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvO-01-74h">
-                                <rect key="frame" x="20" y="317.66666666666669" width="353" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvO-01-74h">
+                                <rect key="frame" x="16" y="161" width="361" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Wcb-KE-S3q"/>
+                                    <constraint firstAttribute="height" constant="56" id="Wcb-KE-S3q"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Navigate to Movie List"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Romantic Comedy"/>
                                 <connections>
                                     <action selector="btnAction:" destination="7sW-OU-q0K" eventType="touchUpInside" id="dPQ-0s-82j"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51E-NQ-QsG">
+                                <rect key="frame" x="16" y="16" width="361" height="76.333333333333329"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web Light" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Movie/Drama Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QG-Ne-NZC">
+                                <rect key="frame" x="16" y="108.33333333333334" width="361" height="36.666666666666657"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web Light" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ihg-bR-Hnl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VvO-01-74h" firstAttribute="centerY" secondItem="ihg-bR-Hnl" secondAttribute="centerY" id="EWA-jA-neb"/>
-                            <constraint firstItem="VvO-01-74h" firstAttribute="centerX" secondItem="ihg-bR-Hnl" secondAttribute="centerX" id="GDL-Rw-K8Q"/>
-                            <constraint firstItem="ihg-bR-Hnl" firstAttribute="trailing" secondItem="VvO-01-74h" secondAttribute="trailing" constant="20" id="WeQ-HM-Q18"/>
-                            <constraint firstItem="VvO-01-74h" firstAttribute="leading" secondItem="ihg-bR-Hnl" secondAttribute="leading" constant="20" id="Zg5-x8-enp"/>
+                            <constraint firstItem="51E-NQ-QsG" firstAttribute="leading" secondItem="ihg-bR-Hnl" secondAttribute="leading" constant="16" id="D0W-eb-xgZ"/>
+                            <constraint firstItem="9QG-Ne-NZC" firstAttribute="leading" secondItem="51E-NQ-QsG" secondAttribute="leading" id="ELz-42-5Dg"/>
+                            <constraint firstItem="ihg-bR-Hnl" firstAttribute="trailing" secondItem="VvO-01-74h" secondAttribute="trailing" constant="16" id="WeQ-HM-Q18"/>
+                            <constraint firstItem="VvO-01-74h" firstAttribute="leading" secondItem="ihg-bR-Hnl" secondAttribute="leading" constant="16" id="Zg5-x8-enp"/>
+                            <constraint firstItem="9QG-Ne-NZC" firstAttribute="trailing" secondItem="51E-NQ-QsG" secondAttribute="trailing" id="cUi-d4-sKI"/>
+                            <constraint firstItem="51E-NQ-QsG" firstAttribute="top" secondItem="ihg-bR-Hnl" secondAttribute="top" constant="16" id="eR9-av-0bR"/>
+                            <constraint firstItem="VvO-01-74h" firstAttribute="top" secondItem="9QG-Ne-NZC" secondAttribute="bottom" constant="16" id="jSx-SZ-uLY"/>
+                            <constraint firstItem="9QG-Ne-NZC" firstAttribute="top" secondItem="51E-NQ-QsG" secondAttribute="bottom" constant="16" id="pdO-GO-eJd"/>
+                            <constraint firstItem="ihg-bR-Hnl" firstAttribute="trailing" secondItem="51E-NQ-QsG" secondAttribute="trailing" constant="16" id="vCA-9k-NIW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jT4-Vy-P3r"/>
