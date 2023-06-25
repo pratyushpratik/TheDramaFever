@@ -8,7 +8,7 @@ This README provides an overview and instructions for TheDramaFever Project, an 
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [TestCases](#testcases)
+- [TestCase](#testcase)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -51,7 +51,7 @@ To run TheDramaFever Project application, you'll need:
 3. Browse through the list of popular movies/dramas or use the search bar to find specific movies/dramas.
    
 
-## TestCases
+## TestCase
 
 1. Unit/Integration test cases are written in VMMovieListTestCase class.
 
