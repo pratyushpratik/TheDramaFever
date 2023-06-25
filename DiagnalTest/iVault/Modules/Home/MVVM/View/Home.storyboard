@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hoy-ZE-F8m">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TitilliumWeb-Light.ttf">
+            <string>TitilliumWeb-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="VDa-LA-tpJ">
+            <objects>
+                <navigationController id="hoy-ZE-F8m" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" translucent="NO" id="ac9-IU-oHl">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7sW-OU-q0K" kind="relationship" relationship="rootViewController" id="ts4-2s-g9Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VMi-0T-qez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1175" y="-1"/>
+        </scene>
+        <!--Movie List-->
+        <scene sceneID="Ly2-eN-D86">
+            <objects>
+                <viewController storyboardIdentifier="VCMovieList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GyU-DC-DIX" customClass="VCMovieList" customModule="DiagnalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LXV-ko-iZV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RHX-l4-f89">
+                                <rect key="frame" x="16" y="59" width="361" height="793"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="47J-t4-mqp">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Ov-o5-ol5"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7Ov-o5-ol5" firstAttribute="trailing" secondItem="RHX-l4-f89" secondAttribute="trailing" constant="16" id="Ckb-Cp-Pfn"/>
+                            <constraint firstItem="RHX-l4-f89" firstAttribute="top" secondItem="7Ov-o5-ol5" secondAttribute="top" id="IUh-vH-DKY"/>
+                            <constraint firstItem="RHX-l4-f89" firstAttribute="leading" secondItem="7Ov-o5-ol5" secondAttribute="leading" constant="16" id="kso-Ta-Ymz"/>
+                            <constraint firstAttribute="bottom" secondItem="RHX-l4-f89" secondAttribute="bottom" id="oBV-BK-OTM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yy3-x6-IjI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="RHX-l4-f89" id="ebV-x3-rZL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EEo-Z2-kJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232.82442748091603" y="44.366197183098592"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="igS-qt-9It">
+            <objects>
+                <viewController storyboardIdentifier="VCHome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7sW-OU-q0K" customClass="VCHome" customModule="DiagnalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Np4-WG-Tef">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvO-01-74h">
+                                <rect key="frame" x="16" y="161" width="361" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Wcb-KE-S3q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Romantic Comedy"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="7sW-OU-q0K" eventType="touchUpInside" id="dPQ-0s-82j"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51E-NQ-QsG">
+                                <rect key="frame" x="16" y="16" width="361" height="76.333333333333329"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web Light" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Movie/Drama Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QG-Ne-NZC">
+                                <rect key="frame" x="16" y="108.33333333333334" width="361" height="36.666666666666657"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-Light" family="Titillium Web Light" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ihg-bR-Hnl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="51E-NQ-QsG" firstAttribute="leading" secondItem="ihg-bR-Hnl" secondAttribute="leading" constant="16" id="D0W-eb-xgZ"/>
+                            <constraint firstItem="9QG-Ne-NZC" firstAttribute="leading" secondItem="51E-NQ-QsG" secondAttribute="leading" id="ELz-42-5Dg"/>
+                            <constraint firstItem="ihg-bR-Hnl" firstAttribute="trailing" secondItem="VvO-01-74h" secondAttribute="trailing" constant="16" id="WeQ-HM-Q18"/>
+                            <constraint firstItem="VvO-01-74h" firstAttribute="leading" secondItem="ihg-bR-Hnl" secondAttribute="leading" constant="16" id="Zg5-x8-enp"/>
+                            <constraint firstItem="9QG-Ne-NZC" firstAttribute="trailing" secondItem="51E-NQ-QsG" secondAttribute="trailing" id="cUi-d4-sKI"/>
+                            <constraint firstItem="51E-NQ-QsG" firstAttribute="top" secondItem="ihg-bR-Hnl" secondAttribute="top" constant="16" id="eR9-av-0bR"/>
+                            <constraint firstItem="VvO-01-74h" firstAttribute="top" secondItem="9QG-Ne-NZC" secondAttribute="bottom" constant="16" id="jSx-SZ-uLY"/>
+                            <constraint firstItem="9QG-Ne-NZC" firstAttribute="top" secondItem="51E-NQ-QsG" secondAttribute="bottom" constant="16" id="pdO-GO-eJd"/>
+                            <constraint firstItem="ihg-bR-Hnl" firstAttribute="trailing" secondItem="51E-NQ-QsG" secondAttribute="trailing" constant="16" id="vCA-9k-NIW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jT4-Vy-P3r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hT-gY-yxi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453" y="30"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
