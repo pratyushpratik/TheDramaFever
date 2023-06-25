@@ -10,6 +10,8 @@ import XCTest
 
 final class VMMovieListTestCase: XCTestCase {
     
+    //testing success case
+    //since page 1 json is available, viewModel.arrMovieList.value must be having some element/elements
     func testfireAPIGetMovieListSuccess() {
         let viewModel = VMMovieList()
         viewModel.fireAPIGETMovieList(for: 1) {
@@ -18,14 +20,18 @@ final class VMMovieListTestCase: XCTestCase {
         }
     }
     
+    //testing faliure case
+    //since page 4 json is not available, viewModel.testingError must be having some value
     func testfireAPIGetMovieListFaliure() {
         let viewModel = VMMovieList()
-        viewModel.fireAPIGETMovieList(for: 4) { //since page 4 json is not available
+        viewModel.fireAPIGETMovieList(for: 4) {
             print("viewModel.testingError==>", viewModel.testingError?.description ?? "")
             XCTAssertTrue(viewModel.testingError != nil)
         }
     }
     
+    //testing dataModel with array
+    //checking if the value is inserting inside the desired array or not
     func testVMMovieListWithDataModel() {
         let obj = [ResponseModelContent.init(name: "The Heirs", posterImage: "poster8")]
         let viewModelMovieList = VMMovieList()
