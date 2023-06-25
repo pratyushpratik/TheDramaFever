@@ -38,7 +38,7 @@ To run TheDramaFever Project application, you'll need:
 
    ```
    cd movie-project
-   open MovieProject.xcodeproj
+   open DiagnalTest.xcodeproj
    ```
    
 ## Usage
