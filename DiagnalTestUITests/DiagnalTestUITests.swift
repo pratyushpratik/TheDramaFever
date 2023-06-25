@@ -32,8 +32,11 @@ final class DiagnalTestUITests: XCTestCase {
         //tesing that Romantic Comedy button exists in home screen or not
         let btnRomanticComedy = app.buttons["Romantic Comedy"]
         XCTAssertTrue(btnRomanticComedy.exists)
-        
         btnRomanticComedy.tap()
+        
+        //tesing that movie list collectionview has first element or not
+        let firstChild = app.collectionViews.children(matching:.any).element(boundBy: 0)
+        XCTAssertTrue(firstChild.exists)
     }
 
     func testLaunchPerformance() throws {
