@@ -27,13 +27,19 @@ class CVCMovieList: UICollectionViewCell {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
                 self.lblName.text = self.model?.name
-                if self.lblName.isTruncatedOrNot() {
-                    self.constraintTrailingLblName?.isActive = false
-                    self.lblName.startMarqueeLabelAnimation()
-                } else {
-                    self.constraintTrailingLblName?.isActive = true
-                }
                 self.imgView.image = UIImage(named: self.model?.posterImage ?? "placeholder_for_missing_posters") ?? UIImage(named: "placeholder_for_missing_posters")
+            }
+        }
+    }
+    
+    func lblAnimation() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            if self.lblName.isTruncatedOrNot() {
+                self.constraintTrailingLblName?.isActive = false
+                self.lblName.startMarqueeLabelAnimation()
+            } else {
+                self.constraintTrailingLblName?.isActive = true
             }
         }
     }

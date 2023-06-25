@@ -177,6 +177,9 @@ extension VCMovieList {
 extension VCMovieList: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let cell = cell as? CVCMovieList {
+            cell.lblAnimation()
+        }
         if page <= 3 && indexPath.item == arrMovieList.count - 6 && self.isLoadingList == false && self.navigationItem.rightBarButtonItem != nil {
             isLoadingList = true
             page += 1
