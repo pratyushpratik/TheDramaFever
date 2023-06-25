@@ -61,6 +61,8 @@ class VCMovieList: UIViewController {
         return searchBar
     }()
     
+    //mutable lazy storage of searchbar created to show in navigation bar
+    //it is created mutable lazy storage slot to get the value of backButtonTitle at runtime
     lazy var backBarButtonItem: UIBarButtonItem = {
         let backButtonItem: UIButton = UIButton()
         backButtonItem.setImage(UIImage(named: "back")?.resizeImage(targetSize: CGSize.init(width: 16, height: 16)), for: .normal)
@@ -177,10 +179,21 @@ extension VCMovieList {
 extension VCMovieList: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        //scroll animation called for large title label
         if let cell = cell as? CVCMovieList {
             cell.lblAnimation()
         }
-        if page <= 3 && indexPath.item == arrMovieList.count - 6 && self.isLoadingList == false && self.navigationItem.rightBarButtonItem != nil {
+        
+        //pagination called
+        //4 checks are called:
+        //1st check is for count of page as page limit is 1...3
+        //2nd check is to check if the indexPath.item has reached till arrMovieList.count - 6 to reload the next data
+        //3rd check is that isLoadingList should is false which is working as a lock inorder to access this critical section one at a time
+        //4th check is that pagination is going to work only in case if searching in not action
+        if page <= 3,
+           indexPath.item == arrMovieList.count - 6,
+           self.isLoadingList == false,
+           self.navigationItem.rightBarButtonItem != nil {
             isLoadingList = true
             page += 1
             vmMovieList.fireAPIGETMovieList(for: page)
@@ -200,7 +213,6 @@ extension VCMovieList: UICollectionViewDelegateFlowLayout, UICollectionViewDeleg
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.invalidateLayout()
         }

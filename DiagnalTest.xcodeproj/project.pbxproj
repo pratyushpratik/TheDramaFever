@@ -211,7 +211,7 @@
 				81306F122A44BBB400BA818F /* ViewModel */,
 				81306F172A44BBB400BA818F /* Model */,
 				81306F182A44BBB400BA818F /* View */,
-				81306F1D2A44BBB400BA818F /* ViewController */,
+				81306F1D2A44BBB400BA818F /* Controller */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -241,13 +241,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		81306F1D2A44BBB400BA818F /* ViewController */ = {
+		81306F1D2A44BBB400BA818F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				81306F1E2A44BBB400BA818F /* VCMovieList.swift */,
 				814942492A47041900C01560 /* VCHome.swift */,
 			);
-			path = ViewController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		81306F252A44BBE000BA818F /* LaunchScreen */ = {

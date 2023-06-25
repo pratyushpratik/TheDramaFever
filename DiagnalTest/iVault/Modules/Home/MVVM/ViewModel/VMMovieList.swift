@@ -23,7 +23,7 @@ class VMMovieList {
     //mutable storage slot testing error for storing custom errors
     var testingError: CustomErrors?
 
-    //for testing
+    //for testing value initialization
     func testMovieListModel(arrMovieList: [ResponseModelContent]) {
         self.arrMovieList.value = arrMovieList
     }

@@ -10,6 +10,7 @@
  */
 import Foundation
 
+//typealias
 typealias ResponseModelContent = ResponseModelMovieList.Page.ContentItems.Content
 
 /**

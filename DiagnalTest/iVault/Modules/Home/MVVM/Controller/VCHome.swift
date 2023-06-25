@@ -16,6 +16,7 @@ import UIKit
  */
 class VCHome: UIViewController {
     
+    //button action is created in order to push VCMovieList controller onto the viewcontroller stack
     @IBAction func btnAction(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "VCMovieList") as? VCMovieList else { return }
         vc.backButtonTitle = "Romantic Comedy"
