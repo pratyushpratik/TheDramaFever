@@ -2,7 +2,7 @@
 
 # TheDramaFever Project README
 
-This README provides an overview and instructions for TheDramaFever Project, an iOS application for movie enthusiasts. TheDramaFever Project allows users to browse and discover movies.
+This README provides an overview and instructions for TheDramaFever Project, an iOS application for movie/dramas lovers. TheDramaFever Project allows users to browse and discover movies/dramas.
 
 ## Table of Contents
 
@@ -15,8 +15,8 @@ This README provides an overview and instructions for TheDramaFever Project, an 
 
 ## Features
 
-- Browse popular movies
-- Search for movies by title
+- Browse popular movies/dramas
+- Search for movies/dramas by title
 - User-friendly interface and smooth navigation
 
 ## Requirements
@@ -26,7 +26,7 @@ To run TheDramaFever Project application, you'll need:
 - Xcode 14.2 or higher
 - iOS 15 or higher
 - Swift 5.0 or higher
-- No internet connection required for accessing movie data
+- No internet connection is required for accessing movie data
 
 ## Installation
 
@@ -49,7 +49,7 @@ To run TheDramaFever Project application, you'll need:
 
 2. Build and run the project on the iOS Simulator or your physical device.
 
-3. Browse through the list of popular movies or use the search bar to find specific movies.
+3. Browse through the list of popular movies/dramas or use the search bar to find specific movies/dramas.
 
 
 ## Contributing
