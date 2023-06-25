@@ -104,9 +104,18 @@ private extension VCMovieList {
     }
     
     func setupNavigationBar() {
-        //self.navigationController?.navigationBar.shadowImage = UIImage(named: "nav_bar")?.resizeImage(targetSize: CGSize.init(width: UIScreen.main.bounds.width, height: 40))
+        //adding shadow to navigation bar
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
+        self.navigationController?.navigationBar.layer.shadowOpacity = 0.8
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+        self.navigationController?.navigationBar.layer.shadowRadius = 2
+        
+        //adding right search button
         rightButtonItem = UIBarButtonItem.setupBarButton(self, action: #selector(rightButtonAction), imageName: "search", tintColor: .white)
         navigationItem.rightBarButtonItem = rightButtonItem
+        
+        //adding left back button
         navigationItem.leftBarButtonItem = backBarButtonItem
     }
     
