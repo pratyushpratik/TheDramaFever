@@ -26,7 +26,7 @@ To run TheDramaFever Project application, you'll need:
 - Xcode 14.2 or higher
 - iOS 15 or higher
 - Swift 5.0 or higher
-- No internet connection is required for accessing movie data
+- No internet connection is required for accessing movies/dramas data
 
 ## Installation
 
