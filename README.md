@@ -1,5 +1,3 @@
-# DiagnalTest
-
 # TheDramaFever Project README
 
 This README provides an overview and instructions for TheDramaFever Project, an iOS application for movies/dramas lovers. TheDramaFever Project allows users to browse and discover movies/dramas.
