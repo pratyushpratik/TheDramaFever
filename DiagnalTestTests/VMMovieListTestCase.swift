@@ -5,9 +5,16 @@
 //  Created by Pratyush Pratik Sinha on 24/06/23.
 //
 
+/**
+ MARK: Importing modules
+ */
 import XCTest
 @testable import DiagnalTest
 
+/**
+ MARK: VMMovieListTestCase
+ - Defination of class VMMovieListTestCase.
+ */
 final class VMMovieListTestCase: XCTestCase {
     
     //testing success case
