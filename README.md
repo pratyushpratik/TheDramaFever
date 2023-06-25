@@ -8,6 +8,7 @@ This README provides an overview and instructions for TheDramaFever Project, an 
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [TestCases](#testcases)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -48,7 +49,14 @@ To run TheDramaFever Project application, you'll need:
 2. Build and run the project on the iOS Simulator or your physical device.
 
 3. Browse through the list of popular movies/dramas or use the search bar to find specific movies/dramas.
+   
 
+## TestCases
+
+1. Unit/Integration test cases are written in VMMovieListTestCase class.
+
+2. UI test cases are written in DiagnalTestUITests class -> testExample().
+   
 
 ## Contributing
 
