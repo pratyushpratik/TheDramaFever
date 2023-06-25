@@ -13,7 +13,7 @@ final class VMMovieListTestCase: XCTestCase {
     func testfireAPIGetMovieListSuccess() {
         let viewModel = VMMovieList()
         viewModel.fireAPIGETMovieList(for: 1)
-        print("viewModel.arrUserList.value", viewModel.arrMovieList.value ?? [])
+        print("viewModel.arrMovieList.value", viewModel.arrMovieList.value ?? [])
         XCTAssertTrue(viewModel.arrMovieList.value?.isEmpty == false)
     }
     
@@ -24,11 +24,11 @@ final class VMMovieListTestCase: XCTestCase {
         XCTAssertTrue(viewModel.testingError != nil)
     }
     
-    func testVMUserListWithDataModel() {
+    func testVMMovieListWithDataModel() {
         let obj = [ResponseModelContent.init(name: "The Heirs", posterImage: "poster8")]
-        let viewModelUserList = VMMovieList()
-        viewModelUserList.testMovieListModel(arrMovieList: obj)
-        XCTAssertEqual(obj[0], viewModelUserList.arrMovieList.value?[0])
+        let viewModelMovieList = VMMovieList()
+        viewModelMovieList.testMovieListModel(arrMovieList: obj)
+        XCTAssertEqual(obj[0], viewModelMovieList.arrMovieList.value?[0])
     }
 
     override func setUpWithError() throws {
