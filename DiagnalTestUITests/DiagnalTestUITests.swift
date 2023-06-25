@@ -28,6 +28,12 @@ final class DiagnalTestUITests: XCTestCase {
         app.launch()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        //tesing that Romantic Comedy button exists in home screen or not
+        let btnRomanticComedy = app.buttons["Romantic Comedy"]
+        XCTAssertTrue(btnRomanticComedy.exists)
+        
+        btnRomanticComedy.tap()
     }
 
     func testLaunchPerformance() throws {

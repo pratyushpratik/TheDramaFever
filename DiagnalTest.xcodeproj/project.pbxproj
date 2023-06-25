@@ -23,6 +23,9 @@
 		8149424A2A47041900C01560 /* VCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814942492A47041900C01560 /* VCHome.swift */; };
 		8149424E2A47198B00C01560 /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8149424D2A47198B00C01560 /* Extension+UIImageView.swift */; };
 		814942502A47243D00C01560 /* VMMovieListTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8149424F2A47243D00C01560 /* VMMovieListTestCase.swift */; };
+		81501FFA2A48C8910076D4AC /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 81501FF92A48C8910076D4AC /* FirebaseAnalyticsSwift */; };
+		81501FFC2A48C8910076D4AC /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 81501FFB2A48C8910076D4AC /* FirebaseCrashlytics */; };
+		81501FFF2A48CAB90076D4AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81501FFE2A48CAB80076D4AC /* GoogleService-Info.plist */; };
 		81A7936B2A4612F400B94F95 /* Extension+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7936A2A4612F400B94F95 /* Extension+UILabel.swift */; };
 		81AAFD282A45686A00A325A6 /* ResponseModelMovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAFD272A45686A00A325A6 /* ResponseModelMovieList.swift */; };
 		81AAFD2A2A456AB300A325A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AAFD292A456AB300A325A6 /* Constants.swift */; };
@@ -73,6 +76,7 @@
 		814942492A47041900C01560 /* VCHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCHome.swift; sourceTree = "<group>"; };
 		8149424D2A47198B00C01560 /* Extension+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
 		8149424F2A47243D00C01560 /* VMMovieListTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMMovieListTestCase.swift; sourceTree = "<group>"; };
+		81501FFE2A48CAB80076D4AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81A7936A2A4612F400B94F95 /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
 		81AAFD272A45686A00A325A6 /* ResponseModelMovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModelMovieList.swift; sourceTree = "<group>"; };
 		81AAFD292A456AB300A325A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81501FFA2A48C8910076D4AC /* FirebaseAnalyticsSwift in Frameworks */,
+				81501FFC2A48C8910076D4AC /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +157,8 @@
 		8118AB722A44741100873A7C /* DiagnalTest */ = {
 			isa = PBXGroup;
 			children = (
+				81501FFE2A48CAB80076D4AC /* GoogleService-Info.plist */,
+				8118AB762A44741100873A7C /* Info.plist */,
 				8118AB732A44741100873A7C /* iVault */,
 			);
 			path = DiagnalTest;
@@ -160,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				8118AB772A44741100873A7C /* ApplicationLayer */,
+				81306F252A44BBE000BA818F /* LaunchScreen */,
 				81306F0F2A44BBB400BA818F /* Modules */,
 				81306F282A44BC4300BA818F /* Auxiliary */,
 				8118AB742A44741100873A7C /* Resources */,
@@ -171,9 +180,7 @@
 		8118AB742A44741100873A7C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8118AB762A44741100873A7C /* Info.plist */,
 				8118AB752A44741100873A7C /* Assets.xcassets */,
-				81306F252A44BBE000BA818F /* LaunchScreen */,
 				81C0E3752A44AC0D004202A9 /* Fonts */,
 				81C0E36E2A44AB04004202A9 /* Json */,
 			);
@@ -332,12 +339,17 @@
 				8118AB3B2A44738B00873A7C /* Sources */,
 				8118AB3C2A44738B00873A7C /* Frameworks */,
 				8118AB3D2A44738B00873A7C /* Resources */,
+				81501FFD2A48C9030076D4AC /* Crashlytics */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DiagnalTest;
+			packageProductDependencies = (
+				81501FF92A48C8910076D4AC /* FirebaseAnalyticsSwift */,
+				81501FFB2A48C8910076D4AC /* FirebaseCrashlytics */,
+			);
 			productName = DiagnalTest;
 			productReference = 8118AB3F2A44738B00873A7C /* DiagnalTest.app */;
 			productType = "com.apple.product-type.application";
@@ -410,6 +422,9 @@
 				Base,
 			);
 			mainGroup = 8118AB362A44738B00873A7C;
+			packageReferences = (
+				81501FF82A48C8910076D4AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 8118AB402A44738B00873A7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -428,6 +443,7 @@
 			files = (
 				81306F272A44BC0D00BA818F /* Home.storyboard in Resources */,
 				81306F2E2A44BCC800BA818F /* CVCMovieList.xib in Resources */,
+				81501FFF2A48CAB90076D4AC /* GoogleService-Info.plist in Resources */,
 				81C0E3722A44AB80004202A9 /* CONTENTLISTINGPAGE-PAGE3.json in Resources */,
 				81C0E3732A44AB80004202A9 /* CONTENTLISTINGPAGE-PAGE1.json in Resources */,
 				81C0E3772A44AC0D004202A9 /* TitilliumWeb-Light.ttf in Resources */,
@@ -452,6 +468,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81501FFD2A48C9030076D4AC /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8118AB3B2A44738B00873A7C /* Sources */ = {
@@ -641,15 +680,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3K6JQ87GJE;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DiagnalTest/iVault/Resources/Info.plist;
+				INFOPLIST_FILE = DiagnalTest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TheDramaFever;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -672,13 +713,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3K6JQ87GJE;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DiagnalTest/iVault/Resources/Info.plist;
+				INFOPLIST_FILE = DiagnalTest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TheDramaFever;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -808,6 +850,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81501FF82A48C8910076D4AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81501FF92A48C8910076D4AC /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81501FF82A48C8910076D4AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		81501FFB2A48C8910076D4AC /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81501FF82A48C8910076D4AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8118AB372A44738B00873A7C /* Project object */;
 }
