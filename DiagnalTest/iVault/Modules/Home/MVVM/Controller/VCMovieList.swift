@@ -80,7 +80,6 @@ class VCMovieList: UIViewController {
         setupUI()
         setupBinding()
         vmMovieList.fireAPIGETMovieList(for: page)
-        UINavigationBar.appearance().backgroundColor = .green
     }
     
     override func viewWillAppear(_ animated: Bool) {

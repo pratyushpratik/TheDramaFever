@@ -14,7 +14,7 @@ import UIKit
 extension UIBarButtonItem {
 
     //method for setting up bar button with constraints
-    static func setupBarButton(_ target: Any?, action: Selector, imageName: String, size: CGSize = CGSize(width: 24, height: 24), tintColor: UIColor?) -> UIBarButtonItem {
+    static func setupBarButton(_ target: Any?, action: Selector, imageName: String, size: CGSize = CGSize(width: 16, height: 16), tintColor: UIColor?) -> UIBarButtonItem {
         let button = UIButton(type: .system)
         button.tintColor = tintColor
         button.setImage(UIImage(named: imageName), for: .normal)
